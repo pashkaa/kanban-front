@@ -49,9 +49,6 @@ export const Task: React.FC<TaskBodyType> = ({_id, title, description, boardId, 
             <div className={s.taskContainer__description}>
                 {isReady ? myDescription : <textarea className={s.textArea} value={myDescription} onChange={changeMyDescriptionHandler} onKeyDown={onKeyDownHandler}></textarea>}
             </div>
-            <div className={s.taskContainer__description}>
-                {}
-            </div>
             <Buttons disabled={!isReady} _id={_id} order={order} title={title} description={description} droppableId={droppableId} boardId={boardId} changeIsGood={changeIsGood}/>
         </div>
     )
